@@ -1,0 +1,8 @@
+READ ME
+
+To deploy and set up the program simply un-zip the folder in any IDE that runs java. From here you can navigate to the main
+class and run the program from here. The program includes all the requriements listed in the LAB 7 assignment and is
+fairly simple to run and use. To use the calculator just interact with the MVC interface that is brought up when the 
+program is ran.
+There is also some input that will be returned to the console, this is just debug logs that helped me figure out why my Memory was 
+having problems and where I needed to implement fixes.

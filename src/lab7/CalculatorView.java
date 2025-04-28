@@ -94,6 +94,9 @@ public class CalculatorView extends JFrame implements Observer {
     }
 
     public void setDisplayText(String text) {
+        if (text != null && text.endsWith(".0")) {
+            text = text.substring(0, text.length() - 2);
+        }
         display.setText(text);
     }
 
@@ -105,7 +108,7 @@ public class CalculatorView extends JFrame implements Observer {
     public void update(Observable o, Object arg) {
         if (arg != null) {
             // Update the display with whatever the model is notifying
-            display.setText((String) arg);
+            setDisplayText((String) arg);
         }
     }
 

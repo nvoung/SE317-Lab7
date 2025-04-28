@@ -30,7 +30,7 @@ public class CalculatorModel extends Observable {
         operator = op;
         operatorSelected = true;
         setChanged();
-        notifyObservers(String.valueOf(firstOperand));
+        notifyObservers(formatNumber(firstOperand));
     }
 
     public void calculate(String currentDisplay) {
@@ -168,5 +168,13 @@ public class CalculatorModel extends Observable {
 
     public void setCurrentInput(String input) {
         currentInput = input;
+    }
+
+    private String formatNumber(double value) {
+        if (value == (long) value) {
+            return String.valueOf((long) value);
+        } else {
+            return String.valueOf(value);
+        }
     }
 }

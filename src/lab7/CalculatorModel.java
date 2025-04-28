@@ -30,7 +30,7 @@ public class CalculatorModel extends Observable {
         operator = op;
         operatorSelected = true;
         setChanged();
-        notifyObservers("");
+        notifyObservers(String.valueOf(firstOperand));
     }
 
     public void calculate(String currentDisplay) {

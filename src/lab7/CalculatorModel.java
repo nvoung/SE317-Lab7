@@ -86,6 +86,14 @@ public class CalculatorModel extends Observable {
         }
     }
 
+    public void deleteLast() {
+        if (!currentInput.isEmpty()) {
+            currentInput = currentInput.substring(0, currentInput.length() - 1);
+            setChanged();
+            notifyObservers(currentInput);
+        }
+    }
+
     public void memoryAdd() {
         if (resultDisplayed) {
             memory += currentResult;

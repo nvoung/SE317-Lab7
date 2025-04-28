@@ -53,11 +53,7 @@ public class CalculatorController {
             } else if (command.equals("C")) {
                 model.clearAll();
             } else if (command.equals("Del")) {
-                String current = model.getCurrentInput();
-                if (!current.isEmpty()) {
-                    model.setCurrentInput(current.substring(0, current.length() - 1));
-                    model.inputNumber(model.getCurrentInput());
-                }
+                model.deleteLast();
             } else if (command.equals("M+")) {
                 System.out.println("Controller: M+ pressed, resultDisplayed=" + model.isResultDisplayed()); // Debug log
                 model.memoryAdd();

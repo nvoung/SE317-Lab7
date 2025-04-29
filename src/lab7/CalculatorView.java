@@ -38,7 +38,23 @@ public class CalculatorView extends JFrame implements Observer {
         JPanel panel = new JPanel(new GridLayout(6, 4, 5, 5));
         for (int i = 0; i <= 9; i++) {
             digitButtons[i] = new JButton(String.valueOf(i));
+            digitButtons[i].setName("digit" + i);
         }
+
+        addButton.setName("add");
+        subButton.setName("subtract");
+        mulButton.setName("multiply");
+        divButton.setName("divide");
+        sqrtButton.setName("sqrt");
+        squareButton.setName("square");
+        decimalButton.setName("decimal");
+        equalButton.setName("equals");
+        clearButton.setName("clear");
+        deleteButton.setName("delete");
+        memAddButton.setName("memAdd");
+        memSubButton.setName("memSubtract");
+        memRecallButton.setName("memRecall");
+        memClearButton.setName("memClear");
 
         // Add buttons to panel
         panel.add(digitButtons[7]);
